@@ -83,6 +83,10 @@
     </button>
   </div>
   <br>
+  <br>
+  <div class="container">
+  <h1> Noticias </h1>
+  </div>
 </body> 
 <main>
 <!-- NOTICIAS -->
@@ -108,12 +112,11 @@
   $.get(urlBase,function(data){    
     $.each(data,function(i,item){
       i=i+1 
-      var elemento = "<div class='col-12 col-lg-4  col-md-6 text-center'>"+
-         " <div class='card' style='width: 18rem;'>"+
-            "<img class='img-fluid'" + "src='"+item.imagenUri+"' class='card-img-top' alt='Foto1'>"+
+      var elemento = "<div class='col-12 col-lg-0  col-md-6 text-center'>"+
+         " <div class='card'>"+
+            "<img class='img-fluid'" + "src='"+item.imagenUri+"' class='card-img-top' style='width:40rem;height:30rem;'>"+
             '<div class="card-body">' +
-              '<h5 class="card-title">'+item.titulo+'</h5>'+
-              '<p class="card-text">'+item.subtitulo+'</p>'+
+              '<h5 class="card-title">'+item.titulo+'</h5>'+              
               '<a href="noticia.html?'+item.id+'" class="btn btn-primary">Ver noticia</a>'+
             "</div>"+
           "</div>"+
@@ -124,14 +127,5 @@
   })
  })
 
- <script>
-$(document).ready(function(){
-    $('.card-img-top').hover(function() {
-        $(this).addClass('card-img-top');
-    }, function() {
-        $(this).removeClass('card-img-top');
-    });
-});
-</script>
 </script>
 </html>
